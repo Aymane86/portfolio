@@ -9,6 +9,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: white;
 }
 
 html {
@@ -150,10 +151,10 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
+  max-height: fit-content;
   margin: 0 10rem;
   box-sizing: border-box;
-  min-height: fit-content;
+  height: auto;
 }
 
 .section-container {
@@ -268,20 +269,19 @@ section {
 }
 
 .about-containers {
+  display: flex;
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
 }
 
-.about-details-container {
-  justify-content: center;
-  flex-direction: column;
+
+
+.about-containers .about-details-container {
+  margin-bottom: 2rem; /* Optional: add margin between rows */
 }
 
-.about-containers,
-.about-details-container {
-  display: flex;
-}
 
 .about-pic {
   border-radius: 2rem;
@@ -315,6 +315,7 @@ section {
 }
 
 /* EXPERIENCE SECTION */
+/* EXPERIENCE SECTION */
 
 #experience {
   position: relative;
@@ -329,29 +330,35 @@ section {
 
 .experience-details-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;  
+  flex-wrap: wrap;  
+  gap: 2rem;  
+}
+
+.about-details-container {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: calc(50% - 1rem); 
+  margin-bottom: 2rem;  
+  box-sizing: border-box;  }
+
+/* Prevent too large of an overflow in very wide screens */
+@media (max-width: 1200px) {
+  .about-details-container {
+    width: calc(50% - 1rem); 
+  }
 }
 
-.article-container {
-  display: flex;
-  text-align: initial;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
+@media (max-width: 768px) {
+  .about-details-container {
+    width: 100%; 
+  }
+  .experience-details-container {
+    justify-content: center; 
+  }
 }
 
-article {
-  display: flex;
-  width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
-}
-
-article .icon {
-  cursor: default;
-}
 
 /* PROJECTS SECTION */
 
