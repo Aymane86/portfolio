@@ -273,13 +273,13 @@ section {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  flex-wrap: wrap; 
 }
 
 
 
 .about-containers .about-details-container {
-  margin-bottom: 2rem; /* Optional: add margin between rows */
+  margin-bottom: 2rem; 
 }
 
 
@@ -314,7 +314,7 @@ section {
   margin: auto 0;
 }
 
-/* EXPERIENCE SECTION */
+
 /* EXPERIENCE SECTION */
 
 #experience {
@@ -343,7 +343,7 @@ section {
   margin-bottom: 2rem;  
   box-sizing: border-box;  }
 
-/* Prevent too large of an overflow in very wide screens */
+
 @media (max-width: 1200px) {
   .about-details-container {
     width: calc(50% - 1rem); 
